@@ -1,11 +1,5 @@
 const date = new Date();
 
-//Desctructuring Example. 
-const arr = ["Raihan", "Elon Mask"];
-const [raihan, elon] = arr
-console.log(raihan)
-
-
 function Card(props){
   const {titleText, descText} = props;
 
