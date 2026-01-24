@@ -7,16 +7,9 @@ import Card from './components/Card'
 import Data from './data.json'
 
 function App(){
-  let items = [];
-  // for(let i = 0; i < Data.length; i++){
-  //   items.push(<Card titleText = {Data[i].title} descText = {Data[i].desc} /> );
-  // }
-
-  items = Data.map((item) => <Card titleText = {item.title} descText = {item.descText} />)
-
   return <div>
     <h1 className='headingStyle'>Todo App</h1>
-    {items}
+    {Data.map((item) => <Card titleText = {item.title} descText = {item.descText} />)}
 
   </div>
 }
