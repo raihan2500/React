@@ -17,6 +17,7 @@ createRoot(document.getElementById('root')).render(
       <h2 className='cardTitle'>{todoTitle}</h2>
       <p className='cardDesc'>{desc} </p>
       <p className='cardFooter'>{"Date: " + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()} </p>
+    
     </div>
   </div>
 )
