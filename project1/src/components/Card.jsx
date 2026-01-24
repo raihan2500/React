@@ -1,11 +1,11 @@
 const date = new Date();
 
 function Card(props){
-  console.log(props)
+  const {titleText, descText} = props;
 
   return <div className='card'>
-      <h2 className='cardTitle'>{props.titleText}</h2>
-      <p className='cardDesc'>{props.descText}</p>
+      <h2 className='cardTitle'>{titleText}</h2>
+      <p className='cardDesc'>{descText}</p>
       <p className='cardFooter'>{"Date: " + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()}</p>
     </div>
 }
