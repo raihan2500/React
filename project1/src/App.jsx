@@ -9,10 +9,9 @@ import Card from './components/Card'
 function App(){
   return <div>
     <h1 className='headingStyle'>Todo App</h1>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
+    <Card titleText="Call mother" descText ="This is description" />
+    <Card titleText="Call father" descText ="This is desc2" />
+    <Card titleText = "Call wife" descText="this is desc3" />
 
   </div>
 }
