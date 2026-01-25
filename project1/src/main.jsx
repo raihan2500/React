@@ -3,6 +3,8 @@ import './index.css'
 import Card from './components/Card.jsx'
 import App from './App.jsx'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 createRoot(document.getElementById('root')).render(
   <App/>
 )
