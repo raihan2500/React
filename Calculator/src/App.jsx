@@ -41,6 +41,7 @@ function App() {
       <div className="display">{display}</div>
       <div className="row">
         <button className="ubtn" onClick={() => clicked('x')}>AC</button>
+        <button className="ubtn" onClick={() => clicked('%')}>%</button>
         <button className="ubtn" onClick={() => clicked('/')}>/</button>
       </div>
       <div className="row">
