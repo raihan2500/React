@@ -8,33 +8,22 @@ import HOOKS_USESTATE from './HOOKS_USESTATE'
 import HOOKS_USESTATE2 from './HOOKS_USESTATE/indexf'
 
 
-//Update state based on previous state
-
 function App(){
-  const [count, setCount] = useState(0);
-  const increment = () =>{
-    
-    //by default erokom hoy
-    // setCount(count + 1); //0 + 1
-    // setCount(count + 1); //0 + 1
-    // setCount(count + 1); //0 + 1
+  
+  //If i click on a child component, it also click on the parent component
+  //This is called event bubbling.
 
-    setCount(count => count + 1); //0 + 1
-    setCount(count => count + 1); //1 + 1
-    setCount(count => count + 1); //2 + 1
-    
-    //We can also write like this
-    setCount((prev)=>prev + 1);
-    setCount((count)=> count + 1)
-    setCount((count) =>{
-      return count + 1;
-    })
-
+  const child = (event) =>{
+    console.log('child:', event);
   }
+  const parent = (event) =>{
+    console.log('parent: ', event);
+  }
+
   return(
-    <div>
-      <h1>count: {count}</h1>
-      <button onClick={increment}>+</button>
+    <div  style={{backgroundColor:'beige'}} onClick={parent}>
+     <h1>Welcome</h1>
+     <button onClick={child} >click</button>
     </div>
   )
 
