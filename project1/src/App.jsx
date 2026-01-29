@@ -7,13 +7,14 @@ import EVENT_BINDING from './EVENT_BINDING'
 import HOOKS_USESTATE from './HOOKS_USESTATE'
 import HOOKS_USESTATE2 from './HOOKS_USESTATE/indexf'
 import USE_EFFECT from './USE_EFFECT'
+import DataFetch from './USE_EFFECT/DataFetch'
 
 function App(){
   
   return(
     <div>
      <h1>Welcome</h1>
-      <USE_EFFECT/>
+      <DataFetch/>
     </div>
   )
 
