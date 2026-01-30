@@ -82,3 +82,136 @@ h1 {
   color: #555;
   line-height: 1.5;
 }
+
+.meal-img{
+  height: 150px;
+  border-radius: 8px;
+}
+
+.meal-list{
+  display: flex;
+  justify-content: center;
+}
+
+.Navbar{
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;  
+}
+
+/* Meal container */
+.meal-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Meal title */
+.meal-container h1 {
+  color: #222;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Meal image */
+.meal-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.meal-img:hover {
+  transform: scale(1.05);
+}
+
+/* Instructions text */
+.meal-container p {
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+  white-space: pre-line; /* preserve line breaks */
+  font-size: 1rem;
+}
+
+/* Loading text */
+.meal-container h1.loading {
+  color: #888;
+}
+
+
+/* Container for the category page */
+.category-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Category title */
+.category-container h1 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+/* Grid for meals */
+.meals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 5fr));
+  gap: 20px;
+  
+  justify-items: center;
+}
+
+/* Individual meal card */
+.meal-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.meal-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Meal image */
+.meal-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.meal-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Meal name */
+.meal-card h2 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1.3;
+}

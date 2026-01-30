@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../App.css';
+import { useNavigate } from 'react-router-dom';
 
 /*
   www.themealdb.com/api/json/v1/1/categories.php 
@@ -23,6 +24,7 @@ const demo = {
 }
 
 export default function Meals() {
+  const navigate = useNavigate();
   const [lists, setLists] = useState(null);
   useEffect(() =>{
     fetch(categories)
@@ -32,6 +34,13 @@ export default function Meals() {
       console.log(res);
     })
   },[])
+
+  const clickOnImage = (category) =>{
+    console.log(category);
+  }
+  if(lists == null){
+    return <h1>Loading Please wait</h1>
+  }
   
   return (
     <div>
@@ -40,7 +49,11 @@ export default function Meals() {
         <div>
           {lists.categories.map(category => (
             <div className='categories' key={category.idCategory} >
-              <img src={category.strCategoryThumb} alt="" />
+              <img src={category.strCategoryThumb} alt="" onClick={ () => 
+                {
+                  navigate('/category/' + category.strCategory);
+                }
+              }/>
               <h3> {category.strCategory} </h3>
               <p>{category.strCategoryDescription}</p>
             </div>
